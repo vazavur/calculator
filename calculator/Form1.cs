@@ -21,7 +21,6 @@ namespace calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            radioButtonto10 
         }
         public string todo { get; set; } //переключатель действий
         public double firstnum { get; set; } //первая строка
