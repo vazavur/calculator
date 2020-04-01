@@ -227,7 +227,7 @@ namespace calculator
         }
 
         private void TextBoxIn1_TextChanged(object sender, EventArgs e)
-        {
+        {/* автоматический перевод в системы без необходимости трогать радиобатоны, убивает отрицательный ввод
             int i = int.Parse(TextBoxIn1.Text);
             if (radioButtonto10.Checked == true)
             {
@@ -240,7 +240,7 @@ namespace calculator
             if (radioButtonto2.Checked == true)
             {
                 labelSysS.Text = Convert.ToString(i, 2);
-            }
+            }*/
         }
 
         private void newFuncButt_Click(object sender, EventArgs e)
@@ -266,19 +266,33 @@ namespace calculator
         private void radioButtonto10_CheckedChanged(object sender, EventArgs e)
         {
             int i = int.Parse(TextBoxIn1.Text);
-            labelSysS.Text = Convert.ToString(i, 10);
+                labelSysS.Text = Convert.ToString(i, 10);
         }
 
         private void radioButtonto8_CheckedChanged(object sender, EventArgs e)
         {
             int i = int.Parse(TextBoxIn1.Text);
-            labelSysS.Text = Convert.ToString(i, 8);
+            if (i < 0)
+            {
+                MessageBox.Show("К сожалению, в данный момент перевод отрицательных чисел не доступен.");
+            }
+            else
+            {
+                labelSysS.Text = Convert.ToString(i, 8);
+            }
         }
 
         private void radioButtonto2_CheckedChanged(object sender, EventArgs e)
         {
             int i = int.Parse(TextBoxIn1.Text);
-            labelSysS.Text = Convert.ToString(i, 2);
+            if (i < 0)
+            {
+                MessageBox.Show("К сожалению, в данный момент перевод отрицательных чисел не доступен.");
+            }
+            else
+            {
+                labelSysS.Text = Convert.ToString(i, 2);
+            }
         }
     }
 
