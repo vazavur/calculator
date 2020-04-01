@@ -280,16 +280,6 @@ namespace calculator
             int i = int.Parse(TextBoxIn1.Text);
             labelSysS.Text = Convert.ToString(i, 2);
         }
-
-        private void labelSysS_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
