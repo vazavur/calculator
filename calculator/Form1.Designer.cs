@@ -52,12 +52,36 @@
             this.radioButtonto8 = new System.Windows.Forms.RadioButton();
             this.radioButtonto2 = new System.Windows.Forms.RadioButton();
             this.labelSysS = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextBoxIn1
             // 
             this.TextBoxIn1.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBoxIn1.Location = new System.Drawing.Point(12, 28);
+            this.TextBoxIn1.Location = new System.Drawing.Point(6, 12);
             this.TextBoxIn1.MaxLength = 25;
             this.TextBoxIn1.Name = "TextBoxIn1";
             this.TextBoxIn1.Size = new System.Drawing.Size(226, 31);
@@ -68,7 +92,7 @@
             // 
             this.PlusButton.BackColor = System.Drawing.Color.Transparent;
             this.PlusButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusButton.Location = new System.Drawing.Point(174, 226);
+            this.PlusButton.Location = new System.Drawing.Point(169, 204);
             this.PlusButton.Name = "PlusButton";
             this.PlusButton.Size = new System.Drawing.Size(42, 43);
             this.PlusButton.TabIndex = 2;
@@ -80,7 +104,7 @@
             // 
             this.MinusButton.BackColor = System.Drawing.Color.Transparent;
             this.MinusButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.MinusButton.Location = new System.Drawing.Point(174, 177);
+            this.MinusButton.Location = new System.Drawing.Point(169, 155);
             this.MinusButton.Name = "MinusButton";
             this.MinusButton.Size = new System.Drawing.Size(42, 43);
             this.MinusButton.TabIndex = 3;
@@ -91,7 +115,7 @@
             // MultiplyButton
             // 
             this.MultiplyButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.MultiplyButton.Location = new System.Drawing.Point(174, 79);
+            this.MultiplyButton.Location = new System.Drawing.Point(169, 57);
             this.MultiplyButton.Name = "MultiplyButton";
             this.MultiplyButton.Size = new System.Drawing.Size(42, 43);
             this.MultiplyButton.TabIndex = 4;
@@ -102,7 +126,7 @@
             // DivideButton
             // 
             this.DivideButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.DivideButton.Location = new System.Drawing.Point(174, 128);
+            this.DivideButton.Location = new System.Drawing.Point(169, 106);
             this.DivideButton.Name = "DivideButton";
             this.DivideButton.Size = new System.Drawing.Size(42, 43);
             this.DivideButton.TabIndex = 5;
@@ -113,7 +137,7 @@
             // ClearButton
             // 
             this.ClearButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ClearButton.Location = new System.Drawing.Point(30, 226);
+            this.ClearButton.Location = new System.Drawing.Point(25, 204);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(42, 43);
             this.ClearButton.TabIndex = 6;
@@ -124,7 +148,7 @@
             // EqualsButton
             // 
             this.EqualsButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.EqualsButton.Location = new System.Drawing.Point(126, 226);
+            this.EqualsButton.Location = new System.Drawing.Point(121, 204);
             this.EqualsButton.Name = "EqualsButton";
             this.EqualsButton.Size = new System.Drawing.Size(42, 43);
             this.EqualsButton.TabIndex = 7;
@@ -135,7 +159,7 @@
             // bOne
             // 
             this.bOne.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bOne.Location = new System.Drawing.Point(30, 79);
+            this.bOne.Location = new System.Drawing.Point(25, 57);
             this.bOne.Name = "bOne";
             this.bOne.Size = new System.Drawing.Size(42, 43);
             this.bOne.TabIndex = 8;
@@ -147,7 +171,7 @@
             // bTwo
             // 
             this.bTwo.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bTwo.Location = new System.Drawing.Point(78, 79);
+            this.bTwo.Location = new System.Drawing.Point(73, 57);
             this.bTwo.Name = "bTwo";
             this.bTwo.Size = new System.Drawing.Size(42, 43);
             this.bTwo.TabIndex = 9;
@@ -158,7 +182,7 @@
             // bThree
             // 
             this.bThree.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bThree.Location = new System.Drawing.Point(126, 79);
+            this.bThree.Location = new System.Drawing.Point(121, 57);
             this.bThree.Name = "bThree";
             this.bThree.Size = new System.Drawing.Size(42, 43);
             this.bThree.TabIndex = 10;
@@ -169,7 +193,7 @@
             // bFour
             // 
             this.bFour.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bFour.Location = new System.Drawing.Point(30, 128);
+            this.bFour.Location = new System.Drawing.Point(25, 106);
             this.bFour.Name = "bFour";
             this.bFour.Size = new System.Drawing.Size(42, 43);
             this.bFour.TabIndex = 11;
@@ -180,7 +204,7 @@
             // bFive
             // 
             this.bFive.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bFive.Location = new System.Drawing.Point(78, 128);
+            this.bFive.Location = new System.Drawing.Point(73, 106);
             this.bFive.Name = "bFive";
             this.bFive.Size = new System.Drawing.Size(42, 43);
             this.bFive.TabIndex = 12;
@@ -191,7 +215,7 @@
             // bSix
             // 
             this.bSix.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bSix.Location = new System.Drawing.Point(126, 128);
+            this.bSix.Location = new System.Drawing.Point(121, 106);
             this.bSix.Name = "bSix";
             this.bSix.Size = new System.Drawing.Size(42, 43);
             this.bSix.TabIndex = 13;
@@ -202,7 +226,7 @@
             // bSeven
             // 
             this.bSeven.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bSeven.Location = new System.Drawing.Point(30, 177);
+            this.bSeven.Location = new System.Drawing.Point(25, 155);
             this.bSeven.Name = "bSeven";
             this.bSeven.Size = new System.Drawing.Size(42, 43);
             this.bSeven.TabIndex = 14;
@@ -213,7 +237,7 @@
             // bEight
             // 
             this.bEight.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bEight.Location = new System.Drawing.Point(78, 177);
+            this.bEight.Location = new System.Drawing.Point(73, 155);
             this.bEight.Name = "bEight";
             this.bEight.Size = new System.Drawing.Size(42, 43);
             this.bEight.TabIndex = 15;
@@ -224,7 +248,7 @@
             // bNine
             // 
             this.bNine.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bNine.Location = new System.Drawing.Point(126, 177);
+            this.bNine.Location = new System.Drawing.Point(121, 155);
             this.bNine.Name = "bNine";
             this.bNine.Size = new System.Drawing.Size(42, 43);
             this.bNine.TabIndex = 16;
@@ -235,7 +259,7 @@
             // bZero
             // 
             this.bZero.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bZero.Location = new System.Drawing.Point(78, 226);
+            this.bZero.Location = new System.Drawing.Point(73, 204);
             this.bZero.Name = "bZero";
             this.bZero.Size = new System.Drawing.Size(42, 43);
             this.bZero.TabIndex = 17;
@@ -245,7 +269,7 @@
             // 
             // newFuncButt
             // 
-            this.newFuncButt.Location = new System.Drawing.Point(222, 79);
+            this.newFuncButt.Location = new System.Drawing.Point(217, 57);
             this.newFuncButt.Name = "newFuncButt";
             this.newFuncButt.Size = new System.Drawing.Size(16, 190);
             this.newFuncButt.TabIndex = 18;
@@ -254,7 +278,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(8, 79);
+            this.button1.Location = new System.Drawing.Point(3, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(16, 190);
             this.button1.TabIndex = 19;
@@ -263,7 +287,7 @@
             // sqrtButton
             // 
             this.sqrtButton.Font = new System.Drawing.Font("MS Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.sqrtButton.Location = new System.Drawing.Point(30, 275);
+            this.sqrtButton.Location = new System.Drawing.Point(25, 253);
             this.sqrtButton.Name = "sqrtButton";
             this.sqrtButton.Size = new System.Drawing.Size(42, 43);
             this.sqrtButton.TabIndex = 20;
@@ -274,7 +298,7 @@
             // radioButtonto10
             // 
             this.radioButtonto10.AutoSize = true;
-            this.radioButtonto10.Location = new System.Drawing.Point(79, 276);
+            this.radioButtonto10.Location = new System.Drawing.Point(74, 254);
             this.radioButtonto10.Name = "radioButtonto10";
             this.radioButtonto10.Size = new System.Drawing.Size(46, 17);
             this.radioButtonto10.TabIndex = 21;
@@ -286,7 +310,7 @@
             // radioButtonto8
             // 
             this.radioButtonto8.AutoSize = true;
-            this.radioButtonto8.Location = new System.Drawing.Point(79, 296);
+            this.radioButtonto8.Location = new System.Drawing.Point(74, 274);
             this.radioButtonto8.Name = "radioButtonto8";
             this.radioButtonto8.Size = new System.Drawing.Size(40, 17);
             this.radioButtonto8.TabIndex = 22;
@@ -298,7 +322,7 @@
             // radioButtonto2
             // 
             this.radioButtonto2.AutoSize = true;
-            this.radioButtonto2.Location = new System.Drawing.Point(126, 276);
+            this.radioButtonto2.Location = new System.Drawing.Point(121, 254);
             this.radioButtonto2.Name = "radioButtonto2";
             this.radioButtonto2.Size = new System.Drawing.Size(40, 17);
             this.radioButtonto2.TabIndex = 23;
@@ -310,10 +334,251 @@
             // labelSysS
             // 
             this.labelSysS.Font = new System.Drawing.Font("MS Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSysS.Location = new System.Drawing.Point(126, 296);
+            this.labelSysS.Location = new System.Drawing.Point(121, 274);
             this.labelSysS.Name = "labelSysS";
             this.labelSysS.Size = new System.Drawing.Size(112, 22);
             this.labelSysS.TabIndex = 24;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(1, -1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(247, 333);
+            this.tabControl1.TabIndex = 25;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.TextBoxIn1);
+            this.tabPage1.Controls.Add(this.labelSysS);
+            this.tabPage1.Controls.Add(this.PlusButton);
+            this.tabPage1.Controls.Add(this.radioButtonto2);
+            this.tabPage1.Controls.Add(this.MinusButton);
+            this.tabPage1.Controls.Add(this.radioButtonto8);
+            this.tabPage1.Controls.Add(this.MultiplyButton);
+            this.tabPage1.Controls.Add(this.radioButtonto10);
+            this.tabPage1.Controls.Add(this.DivideButton);
+            this.tabPage1.Controls.Add(this.sqrtButton);
+            this.tabPage1.Controls.Add(this.ClearButton);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.EqualsButton);
+            this.tabPage1.Controls.Add(this.newFuncButt);
+            this.tabPage1.Controls.Add(this.bOne);
+            this.tabPage1.Controls.Add(this.bZero);
+            this.tabPage1.Controls.Add(this.bTwo);
+            this.tabPage1.Controls.Add(this.bNine);
+            this.tabPage1.Controls.Add(this.bThree);
+            this.tabPage1.Controls.Add(this.bEight);
+            this.tabPage1.Controls.Add(this.bFour);
+            this.tabPage1.Controls.Add(this.bSeven);
+            this.tabPage1.Controls.Add(this.bFive);
+            this.tabPage1.Controls.Add(this.bSix);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(239, 307);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Калькулятор";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.radioButton3);
+            this.tabPage2.Controls.Add(this.radioButton2);
+            this.tabPage2.Controls.Add(this.radioButton1);
+            this.tabPage2.Controls.Add(this.checkBox3);
+            this.tabPage2.Controls.Add(this.checkBox2);
+            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(239, 307);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Строки";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(5, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(228, 31);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(5, 61);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(228, 31);
+            this.textBox2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(2, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "[количество символов]";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(109, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "[количество символов]";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(25, 122);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(25, 145);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "checkBox1";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(25, 168);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "checkBox1";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(134, 122);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(134, 144);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton1";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(134, 167);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton1";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(16, 207);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 34);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(67, 207);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(47, 34);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "button2";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(120, 207);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(47, 34);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "button2";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(173, 207);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(47, 34);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "button2";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(16, 247);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(47, 34);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "button2";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(67, 247);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(47, 34);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "button2";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(120, 247);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(47, 34);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "button2";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(173, 247);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(47, 34);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "button2";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -321,36 +586,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(250, 332);
-            this.Controls.Add(this.labelSysS);
-            this.Controls.Add(this.radioButtonto2);
-            this.Controls.Add(this.radioButtonto8);
-            this.Controls.Add(this.radioButtonto10);
-            this.Controls.Add(this.sqrtButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.newFuncButt);
-            this.Controls.Add(this.bZero);
-            this.Controls.Add(this.bNine);
-            this.Controls.Add(this.bEight);
-            this.Controls.Add(this.bSeven);
-            this.Controls.Add(this.bSix);
-            this.Controls.Add(this.bFive);
-            this.Controls.Add(this.bFour);
-            this.Controls.Add(this.bThree);
-            this.Controls.Add(this.bTwo);
-            this.Controls.Add(this.bOne);
-            this.Controls.Add(this.EqualsButton);
-            this.Controls.Add(this.ClearButton);
-            this.Controls.Add(this.DivideButton);
-            this.Controls.Add(this.MultiplyButton);
-            this.Controls.Add(this.MinusButton);
-            this.Controls.Add(this.PlusButton);
-            this.Controls.Add(this.TextBoxIn1);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "Калькулятор Елисеева";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -380,6 +626,27 @@
         private System.Windows.Forms.RadioButton radioButtonto8;
         private System.Windows.Forms.RadioButton radioButtonto2;
         private System.Windows.Forms.Label labelSysS;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
     }
 }
 
