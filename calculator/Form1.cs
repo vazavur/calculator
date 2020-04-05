@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 // Каждая кнопка имеет обработку на входную строку 
@@ -284,6 +285,55 @@ namespace calculator
             {
                 labelSysS.Text = Convert.ToString(i, 2);
             }
+        }
+
+        private void TBInputLine_TextChanged(object sender, EventArgs e)
+        {
+            labelInputStringLength.Text = TBInputLine.Text.Length.ToString();
+
+        }
+
+        private void TBOutputLine_TextChanged(object sender, EventArgs e)
+        {
+            labelOutputStringLength.Text = TBOutputLine.Text.Length.ToString();
+        }
+
+        private void GoButton_Click(object sender, EventArgs e)
+        {
+            if (radioButtonUp.Checked) { TBOutputLine.Text = TBInputLine.Text.ToUpper(); }
+            if (radioButtonDown.Checked) { TBOutputLine.Text = TBInputLine.Text.ToLower(); }
+        }
+
+        private void StatButton_Click(object sender, EventArgs e)
+        {
+            int a = TBOutputLine.Text.Length;
+            const string glas = "УуЕеЫыАаОоЭэЯяИиЮю";
+            int glascount = 0;
+            for (int i = 0; i < TBOutputLine.Text.Length; ++i)
+                for (int j = 0; j < glas.Length; ++j)
+                    if (TBOutputLine.Text[i] == glas[j])
+                        ++glascount;
+            const string sogl = "ЙйЦцКкНнГгШшЩщЗзХхФфВвПпРрЛлДдЖжЧчСсМмТтБб";
+            int soglcount = 0;
+            for (int i = 0; i < TBOutputLine.Text.Length; ++i)
+                for (int j = 0; j < sogl.Length; ++j)
+                    if (TBOutputLine.Text[i] == sogl[j])
+                        ++soglcount;
+            MessageBox.Show(
+                $"Количество символов: {a}\r\n" +
+                $"Количество гласных: {glascount}\r\n" +
+                $"Количество согласных: {soglcount}\r\n"
+                );
+        }
+
+        private void radioButtonUp_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
