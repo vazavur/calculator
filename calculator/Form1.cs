@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // Каждая кнопка имеет обработку на входную строку 
@@ -24,27 +17,34 @@ namespace calculator
         }
         public string todo { get; set; } //переключатель действий
         public double firstnum { get; set; } //первая строка
-        List<string> mnogohodovochka = new List<string>();
+        //List<string> mnogohodovochka = new List<string>(); //для парсера
+
+        public static double InputString(string text) //обработка входящей строки на ошибку формата
+        {
+            try
+            {
+                double firstnum = double.Parse(text);
+                return firstnum;
+            }
+            catch (FormatException) { MessageBox.Show("Ошибка формата данных"); double err = 0; return err; }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                firstnum = double.Parse(TextBoxIn1.Text);
-                //TextBoxIn1.Text += "+";
+                firstnum = InputString(TextBoxIn1.Text);
                 todo = "plus";
                 TextBoxIn1.Text = "";
             }
             catch (FormatException) { TextBoxIn1.Text = "Формат"; cleaner = "y"; }
         }
 
-        string ifminus;
         private void MinusButton_Click(object sender, EventArgs e)
         {
             try
             {
-                ifminus += TextBoxIn1.Text;
-                //TextBoxIn1.Text += "-";
+                firstnum = InputString(TextBoxIn1.Text);
                 todo = "minus";
                 TextBoxIn1.Text = "";
             }
@@ -55,8 +55,7 @@ namespace calculator
         {
             try
             {
-                firstnum = double.Parse(TextBoxIn1.Text);
-                //TextBoxIn1.Text += "*";
+                firstnum = InputString(TextBoxIn1.Text);
                 todo = "multiply";
                 TextBoxIn1.Text = "";
             }
@@ -67,8 +66,7 @@ namespace calculator
         {
             try
             {
-                firstnum = double.Parse(TextBoxIn1.Text);
-                //TextBoxIn1.Text += "/";
+                firstnum = InputString(TextBoxIn1.Text);
                 todo = "divide";
                 TextBoxIn1.Text = "";
             }
@@ -92,26 +90,19 @@ namespace calculator
                         TextBoxIn1.Text = ((firstnum) + (double.Parse(TextBoxIn1.Text))).ToString();
                         break;
                     case "minus":
-                        TextBoxIn1.Text = (double.Parse(ifminus) - (double.Parse(TextBoxIn1.Text))).ToString();
+                        TextBoxIn1.Text = (firstnum - (double.Parse(TextBoxIn1.Text))).ToString();
                         break;
                     case "multiply":
                         TextBoxIn1.Text = ((firstnum) * (double.Parse(TextBoxIn1.Text))).ToString();
                         break;
                     case "divide":
-                        try
-                        {
-                            TextBoxIn1.Text = ((firstnum) / (double.Parse(TextBoxIn1.Text))).ToString();
-                        }
-                        catch (DivideByZeroException) //автоматически инфинити
-                        {
-                            TextBoxIn1.Text = "Деление на ноль";
-                        }
+                        TextBoxIn1.Text = ((firstnum) / (double.Parse(TextBoxIn1.Text))).ToString();
                         break;
                 }
             }
-            catch (FormatException) { TextBoxIn1.Text = "Формат"; }
+            catch (FormatException) { TextBoxIn1.Text = "формат"; }
 
-            cleaner = "y";
+            cleaner = "y"; //точка для очистки
 
             /* вот это не трогать когда-нибудь это будет парсер
             char pl = '+';
@@ -266,7 +257,7 @@ namespace calculator
         private void radioButtonto10_CheckedChanged(object sender, EventArgs e)
         {
             int i = int.Parse(TextBoxIn1.Text);
-                labelSysS.Text = Convert.ToString(i, 10);
+            labelSysS.Text = Convert.ToString(i, 10);
         }
 
         private void radioButtonto8_CheckedChanged(object sender, EventArgs e)
