@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Windows.Forms;
 
-// Каждая кнопка имеет обработку на входную строку 
 
 namespace calculator
 {
@@ -32,46 +31,30 @@ namespace calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
                 firstnum = InputString(TextBoxIn1.Text);
                 todo = "plus";
                 TextBoxIn1.Text = "";
-            }
-            catch (FormatException) { TextBoxIn1.Text = "Формат"; cleaner = "y"; }
         }
 
         private void MinusButton_Click(object sender, EventArgs e)
         {
-            try
-            {
                 firstnum = InputString(TextBoxIn1.Text);
                 todo = "minus";
                 TextBoxIn1.Text = "";
-            }
-            catch (FormatException) { TextBoxIn1.Text = "Формат"; cleaner = "y"; }
         }
 
         private void MultiplyButton_Click(object sender, EventArgs e)
         {
-            try
-            {
                 firstnum = InputString(TextBoxIn1.Text);
                 todo = "multiply";
                 TextBoxIn1.Text = "";
-            }
-            catch (FormatException) { TextBoxIn1.Text = "Формат"; cleaner = "y"; }
         }
 
         private void DivideButton_Click(object sender, EventArgs e)
         {
-            try
-            {
                 firstnum = InputString(TextBoxIn1.Text);
                 todo = "divide";
                 TextBoxIn1.Text = "";
-            }
-            catch (FormatException) { TextBoxIn1.Text = "Формат"; cleaner = "y"; }
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -83,25 +66,26 @@ namespace calculator
         private string cleaner = "";
         private void EqualsButton_Click(object sender, EventArgs e)
         {
-            try
-            {
+            double t = 0;
                 switch (todo)
                 {
                     case "plus":
-                        TextBoxIn1.Text = ((firstnum) + (double.Parse(TextBoxIn1.Text))).ToString();
-                        break;
+                    t = InputString(TextBoxIn1.Text);
+                    TextBoxIn1.Text = ((firstnum) + (t)).ToString();
+                    break;
                     case "minus":
-                        TextBoxIn1.Text = (firstnum - (double.Parse(TextBoxIn1.Text))).ToString();
-                        break;
+                    t = InputString(TextBoxIn1.Text);
+                    TextBoxIn1.Text = ((firstnum) - (t)).ToString();
+                    break;
                     case "multiply":
-                        TextBoxIn1.Text = ((firstnum) * (double.Parse(TextBoxIn1.Text))).ToString();
-                        break;
+                    t = InputString(TextBoxIn1.Text);
+                    TextBoxIn1.Text = ((firstnum) * (t)).ToString();
+                    break;
                     case "divide":
-                        TextBoxIn1.Text = ((firstnum) / (double.Parse(TextBoxIn1.Text))).ToString();
-                        break;
+                    t = InputString(TextBoxIn1.Text);
+                    TextBoxIn1.Text = ((firstnum) / (t)).ToString();
+                    break;
                 }
-            }
-            catch (FormatException) { TextBoxIn1.Text = "формат"; }
 
             cleaner = "y"; //точка для очистки
 
