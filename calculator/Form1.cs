@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 
@@ -292,23 +293,53 @@ namespace calculator
         {
             int a = TBOutputLine.Text.Length;
             const string glas = "УуЕеЫыАаОоЭэЯяИиЮю";
+            const string sogl = "ЙйЦцКкНнГгШшЩщЗзХхФфВвПпРрЛлДдЖжЧчСсМмТтБб";
+            int soglcount = 0;
             int glascount = 0;
             for (int i = 0; i < TBOutputLine.Text.Length; ++i)
+            {
                 for (int j = 0; j < glas.Length; ++j)
                     if (TBOutputLine.Text[i] == glas[j])
                         ++glascount;
-            const string sogl = "ЙйЦцКкНнГгШшЩщЗзХхФфВвПпРрЛлДдЖжЧчСсМмТтБб";
-            int soglcount = 0;
-            for (int i = 0; i < TBOutputLine.Text.Length; ++i)
                 for (int j = 0; j < sogl.Length; ++j)
                     if (TBOutputLine.Text[i] == sogl[j])
                         ++soglcount;
+            }
             MessageBox.Show(
                 $"Количество символов: {a}\r\n" +
                 $"Количество гласных: {glascount}\r\n" +
-                $"Количество согласных: {soglcount}\r\n"
+                $"Количество согласных: {soglcount}\r\n" +
+                $"Количество цифр: {NumStat(TBOutputLine.Text)}"
                 );
         }
+
+        public static int NumStat(string Input) //метод подсчёта символов по их ASCII-номеру
+        {
+            byte[] NumHunt = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 }; //вот это номера символов искомых
+            byte[] ascii = Encoding.ASCII.GetBytes(Input); //получаем массив из аски символов
+            int numcounter = 0;
+            for (int i = 0; i < Input.Length; i++) //перебираем строку, разбитую на номера символов, на совпадения
+            {
+                for (int j = 0; j < NumHunt.Length; j++)
+                {
+                    if (ascii[i] == NumHunt[j]) ++numcounter;
+                }
+            }
+            return numcounter;
+        }
+
+       /* public static string Correcting(string Input)
+        {
+            int count = 0;
+            foreach (int i in Input)
+            {
+                count++;
+            }
+            for (int i = 0; i < Input.Length; i++)
+            {
+                if (Input[count] )
+            }
+        }*/
 
         private void radioButtonUp_CheckedChanged(object sender, EventArgs e)
         {
