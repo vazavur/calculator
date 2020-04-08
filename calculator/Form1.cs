@@ -287,6 +287,7 @@ namespace calculator
         {
             if (radioButtonUp.Checked) { TBOutputLine.Text = TBInputLine.Text.ToUpper(); }
             if (radioButtonDown.Checked) { TBOutputLine.Text = TBInputLine.Text.ToLower(); }
+            if (CBCorrecting.Checked) { TBOutputLine.Text = Correcting(TBInputLine.Text); }
         }
 
         private void StatButton_Click(object sender, EventArgs e)
@@ -328,18 +329,16 @@ namespace calculator
             return numcounter;
         }
 
-       /* public static string Correcting(string Input)
+        public static string Correcting(string Input)
         {
-            int count = 0;
-            foreach (int i in Input)
-            {
-                count++;
-            }
             for (int i = 0; i < Input.Length; i++)
             {
-                if (Input[count] )
+                if ((i+1) >= Input.Length) break;
+                string a = (Input[i] + Input[i + 1]).ToString();
+                if (a == "жы") { Input = Input.Replace(Input[i + 1].ToString(), "и"); }
             }
-        }*/
+            return Input;
+        }
 
         private void radioButtonUp_CheckedChanged(object sender, EventArgs e)
         {
@@ -349,6 +348,52 @@ namespace calculator
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CBCorrecting_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenderFemale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenderMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void ConvButton_Click(object sender, EventArgs e)
+        {
+            double weight = double.Parse(TBweight.Text); // вес
+            double height = double.Parse(TBheight.Text); // рост
+            int age = int.Parse(TBage.Text); // возраст
+
+            double a = 1;
+            if (IntensifyBox.SelectedItem.ToString() == "Физ. нагрузки нет") { a = 1.2; }
+            if (IntensifyBox.SelectedItem.ToString() == "Трен. ср. тяж. 3 в неделю") { a = 1.38; }
+            if (IntensifyBox.SelectedItem.ToString() == "Трен. ср. тяж. 5 в неделю") { a = 1.46; }
+            if (IntensifyBox.SelectedItem.ToString() == "Интенс. трен. 5 в неделю") { a = 1.55; }
+            if (IntensifyBox.SelectedItem.ToString() == "Трен. ежедневно") { a = 1.64; }
+            if (IntensifyBox.SelectedItem.ToString() == "Интенс. трен. ежедневно") { a = 1.73; }
+            if (IntensifyBox.SelectedItem.ToString() == "Физ нагр. + физ. работа ежедневно") { a = 1.9; }
+
+            double q = (weight * 10) + (height * 6.25) - (age * 5);
+            if (GenderMale.Checked) { q += 5; }
+            else { q = q - 161; }
+            double dci = q * a;
+            ConvOutLabel.Text = dci.ToString();
         }
     }
 

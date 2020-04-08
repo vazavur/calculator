@@ -68,14 +68,30 @@
             this.radioButtonUp = new System.Windows.Forms.RadioButton();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CBCorrecting = new System.Windows.Forms.CheckBox();
             this.labelOutputStringLength = new System.Windows.Forms.Label();
             this.labelInputStringLength = new System.Windows.Forms.Label();
             this.TBOutputLine = new System.Windows.Forms.TextBox();
             this.TBInputLine = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.TBweight = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.GenderFemale = new System.Windows.Forms.RadioButton();
+            this.GenderMale = new System.Windows.Forms.RadioButton();
+            this.TBheight = new System.Windows.Forms.TextBox();
+            this.TBage = new System.Windows.Forms.TextBox();
+            this.IntensifyBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ConvOutLabel = new System.Windows.Forms.Label();
+            this.ConvButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextBoxIn1
@@ -343,6 +359,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -399,7 +416,7 @@
             this.tabPage2.Controls.Add(this.radioButtonUp);
             this.tabPage2.Controls.Add(this.checkBox3);
             this.tabPage2.Controls.Add(this.checkBox2);
-            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.CBCorrecting);
             this.tabPage2.Controls.Add(this.labelOutputStringLength);
             this.tabPage2.Controls.Add(this.labelInputStringLength);
             this.tabPage2.Controls.Add(this.TBOutputLine);
@@ -540,15 +557,16 @@
             this.checkBox2.Text = "checkBox1";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // CBCorrecting
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(25, 122);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CBCorrecting.AutoSize = true;
+            this.CBCorrecting.Location = new System.Drawing.Point(25, 122);
+            this.CBCorrecting.Name = "CBCorrecting";
+            this.CBCorrecting.Size = new System.Drawing.Size(94, 17);
+            this.CBCorrecting.TabIndex = 2;
+            this.CBCorrecting.Text = "Исправление";
+            this.CBCorrecting.UseVisualStyleBackColor = true;
+            this.CBCorrecting.CheckedChanged += new System.EventHandler(this.CBCorrecting_CheckedChanged);
             // 
             // labelOutputStringLength
             // 
@@ -584,6 +602,166 @@
             this.TBInputLine.TabIndex = 0;
             this.TBInputLine.TextChanged += new System.EventHandler(this.TBInputLine_TextChanged);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.ConvButton);
+            this.tabPage3.Controls.Add(this.ConvOutLabel);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.IntensifyBox);
+            this.tabPage3.Controls.Add(this.TBage);
+            this.tabPage3.Controls.Add(this.TBheight);
+            this.tabPage3.Controls.Add(this.GenderMale);
+            this.tabPage3.Controls.Add(this.GenderFemale);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.TBweight);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(242, 308);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Конвертер";
+            // 
+            // TBweight
+            // 
+            this.TBweight.Location = new System.Drawing.Point(132, 14);
+            this.TBweight.Name = "TBweight";
+            this.TBweight.Size = new System.Drawing.Size(51, 20);
+            this.TBweight.TabIndex = 0;
+            this.TBweight.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(100, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Вес";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(95, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Рост";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(77, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Возраст";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(189, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "кг";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(189, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "см";
+            // 
+            // GenderFemale
+            // 
+            this.GenderFemale.AutoSize = true;
+            this.GenderFemale.Location = new System.Drawing.Point(138, 118);
+            this.GenderFemale.Name = "GenderFemale";
+            this.GenderFemale.Size = new System.Drawing.Size(72, 17);
+            this.GenderFemale.TabIndex = 6;
+            this.GenderFemale.TabStop = true;
+            this.GenderFemale.Text = "Женский";
+            this.GenderFemale.UseVisualStyleBackColor = true;
+            this.GenderFemale.CheckedChanged += new System.EventHandler(this.GenderFemale_CheckedChanged);
+            // 
+            // GenderMale
+            // 
+            this.GenderMale.AutoSize = true;
+            this.GenderMale.Location = new System.Drawing.Point(33, 118);
+            this.GenderMale.Name = "GenderMale";
+            this.GenderMale.Size = new System.Drawing.Size(71, 17);
+            this.GenderMale.TabIndex = 7;
+            this.GenderMale.TabStop = true;
+            this.GenderMale.Text = "Мужской";
+            this.GenderMale.UseVisualStyleBackColor = true;
+            this.GenderMale.CheckedChanged += new System.EventHandler(this.GenderMale_CheckedChanged);
+            // 
+            // TBheight
+            // 
+            this.TBheight.Location = new System.Drawing.Point(132, 46);
+            this.TBheight.Name = "TBheight";
+            this.TBheight.Size = new System.Drawing.Size(51, 20);
+            this.TBheight.TabIndex = 8;
+            // 
+            // TBage
+            // 
+            this.TBage.Location = new System.Drawing.Point(132, 77);
+            this.TBage.Name = "TBage";
+            this.TBage.Size = new System.Drawing.Size(51, 20);
+            this.TBage.TabIndex = 9;
+            // 
+            // IntensifyBox
+            // 
+            this.IntensifyBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.IntensifyBox.FormattingEnabled = true;
+            this.IntensifyBox.Items.AddRange(new object[] {
+            "Физ. нагрузки нет",
+            "Трен. ср. тяж. 3 в неделю",
+            "Трен. ср. тяж. 5 в неделю",
+            "Интенс. трен. 5 в неделю",
+            "Трен. ежедневно",
+            "Интенс. трен. ежедневно",
+            "Физ нагр. + физ. работа ежедневно"});
+            this.IntensifyBox.Location = new System.Drawing.Point(33, 176);
+            this.IntensifyBox.Name = "IntensifyBox";
+            this.IntensifyBox.Size = new System.Drawing.Size(177, 21);
+            this.IntensifyBox.TabIndex = 10;
+            this.IntensifyBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(63, 151);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Дневная активность";
+            // 
+            // ConvOutLabel
+            // 
+            this.ConvOutLabel.AutoSize = true;
+            this.ConvOutLabel.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConvOutLabel.Location = new System.Drawing.Point(85, 218);
+            this.ConvOutLabel.Name = "ConvOutLabel";
+            this.ConvOutLabel.Size = new System.Drawing.Size(0, 27);
+            this.ConvOutLabel.TabIndex = 12;
+            // 
+            // ConvButton
+            // 
+            this.ConvButton.Location = new System.Drawing.Point(78, 261);
+            this.ConvButton.Name = "ConvButton";
+            this.ConvButton.Size = new System.Drawing.Size(79, 23);
+            this.ConvButton.TabIndex = 13;
+            this.ConvButton.Text = "ПОЛУЧИТЬ";
+            this.ConvButton.UseVisualStyleBackColor = true;
+            this.ConvButton.Click += new System.EventHandler(this.ConvButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,6 +778,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -642,7 +822,7 @@
         private System.Windows.Forms.RadioButton radioButtonUp;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CBCorrecting;
         private System.Windows.Forms.Button GoButton;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button StatButton;
@@ -651,6 +831,21 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox TBage;
+        private System.Windows.Forms.TextBox TBheight;
+        private System.Windows.Forms.RadioButton GenderMale;
+        private System.Windows.Forms.RadioButton GenderFemale;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TBweight;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox IntensifyBox;
+        private System.Windows.Forms.Label ConvOutLabel;
+        private System.Windows.Forms.Button ConvButton;
     }
 }
 
