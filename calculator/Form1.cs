@@ -316,28 +316,36 @@ namespace calculator
 
         public static int NumStat(string Input) //метод подсчёта символов по их ASCII-номеру
         {
-            byte[] NumHunt = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 }; //вот это номера символов искомых
             byte[] ascii = Encoding.ASCII.GetBytes(Input); //получаем массив из аски символов
             int numcounter = 0;
             for (int i = 0; i < Input.Length; i++) //перебираем строку, разбитую на номера символов, на совпадения
             {
-                for (int j = 0; j < NumHunt.Length; j++)
-                {
-                    if (ascii[i] == NumHunt[j]) ++numcounter;
-                }
+                if (ascii[i] > 47 && ascii[i] < 58) ++numcounter;
             }
             return numcounter;
         }
 
         public static string Correcting(string Input)
         {
-            for (int i = 0; i < Input.Length; i++)
-            {
-                if ((i+1) >= Input.Length) break;
-                string a = (Input[i] + Input[i + 1]).ToString();
-                if (a == "жы") { Input = Input.Replace(Input[i + 1].ToString(), "и"); }
-            }
-            return Input;
+            string output = "";
+
+            output = Input.Replace("чю", "чу");
+
+            output = Input.Replace("щю", "щу");
+
+            output = Input.Replace("чя", "ча");
+
+            output = Input.Replace("щя", "ща");
+
+            output = Input.Replace("жы", "жи");
+
+            output = Input.Replace("шы", "ши");
+
+            output = Input.Replace("чьн", "чн");
+
+            output = Input.Replace("чьк", "чк");
+
+            return output;
         }
 
         private void radioButtonUp_CheckedChanged(object sender, EventArgs e)
