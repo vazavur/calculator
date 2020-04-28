@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -402,6 +403,40 @@ namespace calculator
             else { q = q - 161; }
             double dci = q * a;
             ConvOutLabel.Text = dci.ToString();
+        }
+
+        public char separator = ':';
+        private void buttonFile_IN_Click(object sender, EventArgs e)
+        {
+            FileStream file = new FileStream("D:\\inpvt.txt", FileMode.OpenOrCreate, FileAccess.Read);
+            StreamReader reader = new StreamReader(file);
+            string data = reader.ReadToEnd();
+            string[] collecteddata = data.Split(separator);
+            reader.Close();
+            /* самая кривая реализация - должно получиться ровно то количество
+             * строк (в файле), которое имеется (входных) в самом конвертере */
+            TBweight.Text = collecteddata[0];
+            TBheight.Text = collecteddata[1];
+            TBage.Text = collecteddata[2];
+        }
+
+        private void buttonfile_OUT_Click(object sender, EventArgs e)
+        {
+            //этот на данный момент только записывает результат, дальше сможет записывать все данные
+            FileStream file = new FileStream("D:\\outpvt.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(file);
+            writer.Write("Рекомендуемое количество калорий " + ConvOutLabel.Text);
+            writer.Close();
+        }
+
+        private void TBheight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBage_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

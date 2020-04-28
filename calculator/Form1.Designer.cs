@@ -74,20 +74,22 @@
             this.TBOutputLine = new System.Windows.Forms.TextBox();
             this.TBInputLine = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.TBweight = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.GenderFemale = new System.Windows.Forms.RadioButton();
-            this.GenderMale = new System.Windows.Forms.RadioButton();
-            this.TBheight = new System.Windows.Forms.TextBox();
-            this.TBage = new System.Windows.Forms.TextBox();
-            this.IntensifyBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ConvOutLabel = new System.Windows.Forms.Label();
             this.ConvButton = new System.Windows.Forms.Button();
+            this.ConvOutLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.IntensifyBox = new System.Windows.Forms.ComboBox();
+            this.TBage = new System.Windows.Forms.TextBox();
+            this.TBheight = new System.Windows.Forms.TextBox();
+            this.GenderMale = new System.Windows.Forms.RadioButton();
+            this.GenderFemale = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TBweight = new System.Windows.Forms.TextBox();
+            this.buttonFile_IN = new System.Windows.Forms.Button();
+            this.buttonfile_OUT = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -605,6 +607,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.buttonfile_OUT);
+            this.tabPage3.Controls.Add(this.buttonFile_IN);
             this.tabPage3.Controls.Add(this.ConvButton);
             this.tabPage3.Controls.Add(this.ConvOutLabel);
             this.tabPage3.Controls.Add(this.label6);
@@ -625,96 +629,33 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Конвертер";
             // 
-            // TBweight
+            // ConvButton
             // 
-            this.TBweight.Location = new System.Drawing.Point(132, 14);
-            this.TBweight.Name = "TBweight";
-            this.TBweight.Size = new System.Drawing.Size(51, 20);
-            this.TBweight.TabIndex = 0;
-            this.TBweight.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ConvButton.Location = new System.Drawing.Point(78, 261);
+            this.ConvButton.Name = "ConvButton";
+            this.ConvButton.Size = new System.Drawing.Size(79, 23);
+            this.ConvButton.TabIndex = 13;
+            this.ConvButton.Text = "ПОЛУЧИТЬ";
+            this.ConvButton.UseVisualStyleBackColor = true;
+            this.ConvButton.Click += new System.EventHandler(this.ConvButton_Click);
             // 
-            // label1
+            // ConvOutLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Вес";
+            this.ConvOutLabel.AutoSize = true;
+            this.ConvOutLabel.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConvOutLabel.Location = new System.Drawing.Point(85, 218);
+            this.ConvOutLabel.Name = "ConvOutLabel";
+            this.ConvOutLabel.Size = new System.Drawing.Size(0, 27);
+            this.ConvOutLabel.TabIndex = 12;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Рост";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Возраст";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "кг";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(189, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "см";
-            // 
-            // GenderFemale
-            // 
-            this.GenderFemale.AutoSize = true;
-            this.GenderFemale.Location = new System.Drawing.Point(138, 118);
-            this.GenderFemale.Name = "GenderFemale";
-            this.GenderFemale.Size = new System.Drawing.Size(72, 17);
-            this.GenderFemale.TabIndex = 6;
-            this.GenderFemale.TabStop = true;
-            this.GenderFemale.Text = "Женский";
-            this.GenderFemale.UseVisualStyleBackColor = true;
-            this.GenderFemale.CheckedChanged += new System.EventHandler(this.GenderFemale_CheckedChanged);
-            // 
-            // GenderMale
-            // 
-            this.GenderMale.AutoSize = true;
-            this.GenderMale.Location = new System.Drawing.Point(33, 118);
-            this.GenderMale.Name = "GenderMale";
-            this.GenderMale.Size = new System.Drawing.Size(71, 17);
-            this.GenderMale.TabIndex = 7;
-            this.GenderMale.TabStop = true;
-            this.GenderMale.Text = "Мужской";
-            this.GenderMale.UseVisualStyleBackColor = true;
-            this.GenderMale.CheckedChanged += new System.EventHandler(this.GenderMale_CheckedChanged);
-            // 
-            // TBheight
-            // 
-            this.TBheight.Location = new System.Drawing.Point(132, 46);
-            this.TBheight.Name = "TBheight";
-            this.TBheight.Size = new System.Drawing.Size(51, 20);
-            this.TBheight.TabIndex = 8;
-            // 
-            // TBage
-            // 
-            this.TBage.Location = new System.Drawing.Point(132, 77);
-            this.TBage.Name = "TBage";
-            this.TBage.Size = new System.Drawing.Size(51, 20);
-            this.TBage.TabIndex = 9;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(63, 151);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Дневная активность";
             // 
             // IntensifyBox
             // 
@@ -734,33 +675,118 @@
             this.IntensifyBox.TabIndex = 10;
             this.IntensifyBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label6
+            // TBage
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 151);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Дневная активность";
+            this.TBage.Location = new System.Drawing.Point(132, 77);
+            this.TBage.Name = "TBage";
+            this.TBage.Size = new System.Drawing.Size(51, 20);
+            this.TBage.TabIndex = 9;
+            this.TBage.TextChanged += new System.EventHandler(this.TBage_TextChanged);
             // 
-            // ConvOutLabel
+            // TBheight
             // 
-            this.ConvOutLabel.AutoSize = true;
-            this.ConvOutLabel.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConvOutLabel.Location = new System.Drawing.Point(85, 218);
-            this.ConvOutLabel.Name = "ConvOutLabel";
-            this.ConvOutLabel.Size = new System.Drawing.Size(0, 27);
-            this.ConvOutLabel.TabIndex = 12;
+            this.TBheight.Location = new System.Drawing.Point(132, 46);
+            this.TBheight.Name = "TBheight";
+            this.TBheight.Size = new System.Drawing.Size(51, 20);
+            this.TBheight.TabIndex = 8;
+            this.TBheight.TextChanged += new System.EventHandler(this.TBheight_TextChanged);
             // 
-            // ConvButton
+            // GenderMale
             // 
-            this.ConvButton.Location = new System.Drawing.Point(78, 261);
-            this.ConvButton.Name = "ConvButton";
-            this.ConvButton.Size = new System.Drawing.Size(79, 23);
-            this.ConvButton.TabIndex = 13;
-            this.ConvButton.Text = "ПОЛУЧИТЬ";
-            this.ConvButton.UseVisualStyleBackColor = true;
-            this.ConvButton.Click += new System.EventHandler(this.ConvButton_Click);
+            this.GenderMale.AutoSize = true;
+            this.GenderMale.Location = new System.Drawing.Point(33, 118);
+            this.GenderMale.Name = "GenderMale";
+            this.GenderMale.Size = new System.Drawing.Size(71, 17);
+            this.GenderMale.TabIndex = 7;
+            this.GenderMale.TabStop = true;
+            this.GenderMale.Text = "Мужской";
+            this.GenderMale.UseVisualStyleBackColor = true;
+            this.GenderMale.CheckedChanged += new System.EventHandler(this.GenderMale_CheckedChanged);
+            // 
+            // GenderFemale
+            // 
+            this.GenderFemale.AutoSize = true;
+            this.GenderFemale.Location = new System.Drawing.Point(138, 118);
+            this.GenderFemale.Name = "GenderFemale";
+            this.GenderFemale.Size = new System.Drawing.Size(72, 17);
+            this.GenderFemale.TabIndex = 6;
+            this.GenderFemale.TabStop = true;
+            this.GenderFemale.Text = "Женский";
+            this.GenderFemale.UseVisualStyleBackColor = true;
+            this.GenderFemale.CheckedChanged += new System.EventHandler(this.GenderFemale_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(189, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "см";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(189, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "кг";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(77, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Возраст";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(95, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Рост";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(100, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Вес";
+            // 
+            // TBweight
+            // 
+            this.TBweight.Location = new System.Drawing.Point(132, 14);
+            this.TBweight.Name = "TBweight";
+            this.TBweight.Size = new System.Drawing.Size(51, 20);
+            this.TBweight.TabIndex = 0;
+            this.TBweight.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // buttonFile_IN
+            // 
+            this.buttonFile_IN.Location = new System.Drawing.Point(10, 10);
+            this.buttonFile_IN.Name = "buttonFile_IN";
+            this.buttonFile_IN.Size = new System.Drawing.Size(39, 45);
+            this.buttonFile_IN.TabIndex = 14;
+            this.buttonFile_IN.Text = "-->";
+            this.buttonFile_IN.UseVisualStyleBackColor = true;
+            this.buttonFile_IN.Click += new System.EventHandler(this.buttonFile_IN_Click);
+            // 
+            // buttonfile_OUT
+            // 
+            this.buttonfile_OUT.Location = new System.Drawing.Point(193, 253);
+            this.buttonfile_OUT.Name = "buttonfile_OUT";
+            this.buttonfile_OUT.Size = new System.Drawing.Size(39, 45);
+            this.buttonfile_OUT.TabIndex = 14;
+            this.buttonfile_OUT.Text = "-->";
+            this.buttonfile_OUT.UseVisualStyleBackColor = true;
+            this.buttonfile_OUT.Click += new System.EventHandler(this.buttonfile_OUT_Click);
             // 
             // MainForm
             // 
@@ -846,6 +872,8 @@
         private System.Windows.Forms.ComboBox IntensifyBox;
         private System.Windows.Forms.Label ConvOutLabel;
         private System.Windows.Forms.Button ConvButton;
+        private System.Windows.Forms.Button buttonfile_OUT;
+        private System.Windows.Forms.Button buttonFile_IN;
     }
 }
 
